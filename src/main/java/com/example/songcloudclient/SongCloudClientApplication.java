@@ -39,6 +39,8 @@ public class SongCloudClientApplication {
             log.info(response);
             log.info(songCloudClient.updateSongByPut(4, new UpdateSongRequest("Monster", "Skillet")));
             log.info(songCloudClient.updateSongByPatch(2, new UpdateSongRequest("Diamonds", null)));
+            log.info("----------------------Songs After operations----------------------");
+            log.info(songCloudClient.getAllSongs());
 
         } catch (FeignException.FeignClientException feignClientException) {
             log.error("Client exception: " + feignClientException.getMessage() + " " + feignClientException.status());

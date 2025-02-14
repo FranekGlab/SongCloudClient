@@ -1,4 +1,6 @@
 package com.example.songcloudclient.response;
 
-public record UpdateSongByPatchResponse(String songName, String artistName) {
+import com.example.songcloudclient.model.Song;
+
+public record UpdateSongByPatchResponse(Song updatedSong) {
 }
